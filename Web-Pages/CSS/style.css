@@ -1,0 +1,63 @@
+/* #navbar iframe {
+    width: 100%;
+    /* Set different heights based on screen size */
+    /* height: 60px; Default height */
+/* } */
+
+
+body {
+    background-image: url('bgimage4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+        padding-bottom: 100px; 
+}
+
+.footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #03030ae0; 
+        padding: 10px 0;
+        text-align: center;
+        color: white; 
+
+    }
+
+    .btn-custom-pink {
+        background-color: rgba(79, 7, 247, 0.993);;
+        border-color: rgba(79, 7, 247, 0.993);
+        color: white; 
+    }
+    
+    /* Hover and focus styles */
+    .btn-custom-pink:hover,
+    .btn-custom-pink:focus {
+        background-color: rgba(134, 111, 187, 0.993);
+        border-color: rgba(122, 104, 163, 0.993);
+        color: white;
+    }
+    
+
+/* Media queries for different screen sizes */
+@media (min-width: 576px) {
+    #navbar iframe {
+        height: 60px; /* Adjust height for screens >= 576px */
+    }
+}
+@media (min-width: 768px) {
+    #navbar iframe {
+        height: 80px; /* Adjust height for screens >= 768px */
+    }
+}
+@media (min-width: 992px) {
+    #navbar iframe {
+        height: 60px; /* Adjust height for screens >= 992px */
+    }
+}
+@media (min-width: 1200px) {
+    #navbar iframe {
+        height: 60px; /* Adjust height for screens >= 1200px */
+    }
+} */

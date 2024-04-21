@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Approve Property</title>
+    <style>
+      body {
+        background-image: url('bgimage4.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+            padding-bottom: 100px; 
+    }
+
+    .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #03030ae0; 
+            padding: 10px 0;
+            text-align: center;
+            color: white; 
+
+        }
+
+        table {
+          background-color: #42429ce0;
+        opacity: 0.7; 
+
+    }
+    .text-center {
+    text-align: center;
+}
+
+   
+.btn-custom-pink {
+    background-color: rgba(79, 7, 247, 0.993);;
+    border-color: rgba(79, 7, 247, 0.993);
+    color: white; 
+}
+
+/* Hover and focus styles */
+.btn-custom-pink:hover,
+.btn-custom-pink:focus {
+    background-color: rgba(134, 111, 187, 0.993);
+    border-color: rgba(122, 104, 163, 0.993);
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Main-Page.Html" style="color: rgba(79, 7, 247, 0.993);">HomeRentals.com</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="Main-Page.Html">Home</a>
+            </li>
+            <li class="nav-item" id="property">
+              <a class="nav-link" href="PropertyList.Html">Property</a>
+            </li>
+            <li class="nav-item" id="appSent">
+              <a class="nav-link" href="Appointment-Sent.Html">Appointments</a>
+            </li>
+            <li class="nav-item"  id="appReceived">
+              <a class="nav-link" href="Appointment-Received.Html">Appointments</a>
+          </li>
+          <li class="nav-item"  id="propertyAppv">
+              <a class="nav-link" href="ApproveProperty.Html">Approve</a>
+          </li> 
+          <li class="nav-item"  id="propertyAppv">
+            <a class="nav-link" href="About.Html">About us</a>
+        </li>
+          </ul>
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item" id="loginLink">
+              <a class="nav-link" href="Login.Html">Login</a>
+            </li> <li class="nav-item" id="registerLink">
+              <a class="nav-link" href="Registration-Page.Html">Register</a>
+          </li>                    
+          <li class="nav-item" id="logout">
+            <a class="nav-link" onclick="logOut()">Logout</a>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <div class="text-center">
+      <h2 class="mb-4" style="color: rgba(79, 7, 247, 0.993);">About us</h2>
+  </div>
+
+  <div class="container mt-5">
+    <p><strong style="color: rgba(79, 7, 247, 0.993);">Welcome to HomeRentals.com,</strong><strong> your premier destination for finding the perfect rental home across all states of the United States. We understand that finding the right home to rent can be a daunting task, and that's why we're here to simplify the process and help you find a place that truly feels like home.</strong></p>
+    <p><strong style="color: rgba(79, 7, 247, 0.993);">At HomeRentals.com,</strong> <strong>our mission is to make the process of finding a rental home easy, efficient, and enjoyable. We're committed to providing a user-friendly platform that connects renters with a wide range of properties in various states, ensuring that you can explore options that suit your needs and preferences.</strong></p>
+    <p><strong style="color: rgba(79, 7, 247, 0.993);">Why Choose Us?</strong></p>
+    <ul>
+        <li><strong style="color: rgba(79, 7, 247, 0.993);">Nationwide Coverage:</strong> <strong> We proudly serve all states of the United States, giving you access to a diverse selection of rental properties across the country.</strong></li>
+        <li><strong style="color: rgba(79, 7, 247, 0.993);">User-Friendly Experience:</strong><strong>  Our website is designed with you in mind. Our intuitive interface and powerful search tools make it a breeze to browse through listings, compare properties, and find the perfect match.</strong></li>
+        <li><strong style="color: rgba(79, 7, 247, 0.993);">Comprehensive Listings:</strong><strong>  Whether you're looking for an apartment, house, condo, or any other type of rental property, we have an extensive database that covers a wide range of housing options.</strong></li>
+        <li><strong style="color: rgba(79, 7, 247, 0.993);">Detailed Information:</strong> <strong> Each listing provides comprehensive information about the property, including photos, amenities, rental terms, and contact details for landlords or property managers.</strong></li>
+        <li><strong style="color: rgba(79, 7, 247, 0.993);">Helpful Resources:</strong><strong>  Our blog features useful articles, tips, and guides to assist you in your rental journey, whether you're a first-time renter or an experienced tenant.</strong></li>
+    </ul>
+    <p><strong style="color: rgba(79, 7, 247, 0.993);">Our Commitment to You</strong></p>
+    <p><strong> We're dedicated to fostering a seamless and transparent rental experience. Our team is passionate about helping you find a home that matches your lifestyle and preferences. Whether you're relocating to a new state or searching for a temporary residence,</strong> <strong style="color: rgba(79, 7, 247, 0.993);">HomeRentals.com</strong><strong> is your trusted partner in the search for your next rental home.</strong></p>
+    <p><strong> Thank you for choosing </strong><strong style="color: rgba(79, 7, 247, 0.993);">HomeRentals.com.</strong> <strong>We're excited to be part of your journey towards finding the perfect place to call home.</strong></p>
+</div>
+
+
+
+
+
+
+
+    <div class="footer">
+      <p>&copy; 2023 HomeRentals.com. All rights reserved.</p>
+  </div>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JavaScript/config.js"></script>
+   <script src="JavaScript/common.js"></script>
+   <script src="JavaScript/approveProperty.js"></script>
+    </body>
+</html>
