@@ -121,73 +121,78 @@ async function handleSearch() {
     }
 }
 
+
 function displayProperties(properties) {
     const propertyDetailsContainer = document.getElementById('propertyDetailsContainer');
     propertyDetailsContainer.innerHTML = ''; // Clear previous results
 
     // Loop through the properties and create cards for each property
-    properties?.forEach((property) => {   
-        const card = document.createElement('div');
-        card.classList.add('card', 'mb-3');
+    for (let i = 0; i < properties.length; i += 2) {
+        const cardRow = document.createElement('div');
+        cardRow.classList.add('row');
 
-        const row = document.createElement('div');
-        row.classList.add('row', 'no-gutters');
+        for (let j = i; j < i + 2 && j < properties.length; j++) {
+            const property = properties[j];
 
-        const colImage = document.createElement('div');
-        colImage.classList.add('col-md-4');
+            const cardCol = document.createElement('div');
+            cardCol.classList.add('col-md-6', 'mb-3');
 
-        const propertyImage = document.createElement('img');
-        propertyImage.src = `JavaScript/uploads/${property.ImagePaths?.split(';')[0]}`;
-        propertyImage.classList.add('card-img');
-        // propertyImage.style.width = '250px'; // Set your desired width
-        propertyImage.style.height = '200px'; // Set your desired height
+            const card = document.createElement('div');
+            card.classList.add('card');
 
-        colImage.appendChild(propertyImage);
-        row.appendChild(colImage);
+            // Property image
+            const propertyImage = document.createElement('img');
+            propertyImage.src = `JavaScript/uploads/${property.ImagePaths?.split(';')[0]}`;
+            propertyImage.classList.add('card-img-top');
+            propertyImage.alt = property.PropertyName;
 
-        const colDetails = document.createElement('div');
-        colDetails.classList.add('col-md-8');
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
 
-        const cardBody = document.createElement('div');
-        cardBody.classList.add('card-body');
+            const propertyName = document.createElement('h5');
+            propertyName.classList.add('card-title');
+            propertyName.textContent = property.PropertyName;
 
-        const propertyName = document.createElement('h5');
-        propertyName.classList.add('card-title');
-        propertyName.textContent = property.PropertyName;
+            const propertyPrice = document.createElement('p');
+            propertyPrice.classList.add('card-text');
+            propertyPrice.innerHTML = `<strong>Price($):</strong> ${property.Price}`;
 
-        const propertyPrice = document.createElement('p');
-        propertyPrice.classList.add('card-text');
-        propertyPrice.innerHTML = `<strong>Price($):</strong> ${property.Price}`;
+            const propertyAmenities = document.createElement('p');
+            propertyAmenities.classList.add('card-text');
+            propertyAmenities.innerHTML = `<strong>Amenities:</strong> ${property.Amenities}`;
 
-        const propertyAmenities = document.createElement('p');
-        propertyAmenities.classList.add('card-text');
-        propertyAmenities.innerHTML = `<strong>Amenities:</strong> ${property.Amenities}`;
+            const propertyAvailability = document.createElement('p');
+            propertyAvailability.classList.add('card-text');
+            propertyAvailability.innerHTML = `<strong>Availability Date:</strong> ${new Date(property.AvailabilityDate).toLocaleDateString('en-US')}`;
 
-        const propertyAvailability = document.createElement('p');
-        propertyAvailability.classList.add('card-text');
-        propertyAvailability.innerHTML = `<strong>Availability Date:</strong> ${new Date(property.AvailabilityDate).toLocaleDateString('en-US')}`;
+            // Create the "Book Appointment" button
+            const bookAppointmentButton = document.createElement('button');
+            bookAppointmentButton.textContent = 'Book Appointment';
+            bookAppointmentButton.classList.add('btn', 'btn-custom-pink', 'mt-2');
+            bookAppointmentButton.addEventListener('click', () => {
+                // Call the bookAppointment function and pass the property ID
+                bookAppointment(property.PropertyId);
+            });
 
-         // Create the "Book Appointment" button
-    const bookAppointmentButton = document.createElement('button');
-    bookAppointmentButton.textContent = 'Book Appointment';
-    bookAppointmentButton.classList.add('btn', 'btn-custom-pink', 'mt-2');
-    bookAppointmentButton.addEventListener('click', () => {
-        // Call the bookAppointment function and pass the property ID
-        bookAppointment(property.PropertyId);
-    });
-        cardBody.appendChild(propertyName);
-        cardBody.appendChild(propertyPrice);
-        cardBody.appendChild(propertyAmenities);
-        cardBody.appendChild(propertyAvailability);
-        cardBody.appendChild(bookAppointmentButton);
+            cardBody.appendChild(propertyName);
+            cardBody.appendChild(propertyPrice);
+            cardBody.appendChild(propertyAmenities);
+            cardBody.appendChild(propertyAvailability);
+            cardBody.appendChild(bookAppointmentButton);
 
-        colDetails.appendChild(cardBody);
-        row.appendChild(colDetails);
+            card.appendChild(propertyImage);
+            card.appendChild(cardBody);
+            cardCol.appendChild(card);
+            cardRow.appendChild(cardCol);
+        }
 
-        card.appendChild(row);
-        propertyDetailsContainer.appendChild(card);
-    });
+        propertyDetailsContainer.appendChild(cardRow);
+    }
 }
+
+
+
+
 
 function bookAppointment(propertyId) {
     console.log('yes property id' + propertyId);

@@ -9,7 +9,7 @@
     <style>
 
 body {
-        background-image: url('bgimage4.jpg');
+        /* background-image: url('bgimage4.jpg'); */
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0;
@@ -40,9 +40,9 @@ body {
 </head>
 <body>
     
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="Main-Page.Html" style="color: rgba(79, 7, 247, 0.993);">HomeRentals.com</a>
+      <a class="navbar-brand" href="Main-Page.Html" style="color: rgb(30, 106, 9);">HomeRentals.com</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -52,29 +52,29 @@ body {
             <a class="nav-link active" href="Main-Page.Html">Home</a>
           </li>
           <li class="nav-item" id="property">
-            <a class="nav-link" href="PropertyList.Html">Property</a>
+            <a class="nav-link text-dark" href="PropertyList.Html">Property</a>
           </li>
           <li class="nav-item" id="appSent">
-            <a class="nav-link" href="Appointment-Sent.Html">Appointments</a>
+            <a class="nav-link text-dark" href="Appointment-Sent.Html">Appointments</a>
           </li>
           <li class="nav-item"  id="appReceived">
-            <a class="nav-link" href="Appointment-Received.Html">Appointments</a>
+            <a class="nav-link text-dark" href="Appointment-Received.Html">Appointments</a>
         </li>
         <li class="nav-item"  id="propertyAppv">
-            <a class="nav-link" href="ApproveProperty.Html">Approve</a>
+            <a class="nav-link text-dark" href="ApproveProperty.Html">Approve</a>
         </li> 
         <li class="nav-item"  id="propertyAppv">
-          <a class="nav-link" href="About.Html">About us</a>
+          <a class="nav-link text-data" href="About.Html">About us</a>
       </li>
         </ul>
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item" id="loginLink">
-            <a class="nav-link" href="Login.Html">Login</a>
+            <a class="nav-link text-data" href="Login.Html">Login</a>
           </li> <li class="nav-item" id="registerLink">
-            <a class="nav-link" href="Registration-Page.Html">Register</a>
+            <a class="nav-link text-data" href="Registration-Page.Html">Register</a>
         </li>                    
         <li class="nav-item" id="logout">
-          <a class="nav-link" onclick="logOut()">Logout</a>
+          <a class="nav-link text-dark" onclick="logOut()">Logout</a>
       </li>
         </ul>
       </div>
@@ -82,17 +82,17 @@ body {
   </nav>
 <br>
   <div class="text-center">
-    <h2 class="mb-4" style="color: rgba(79, 7, 247, 0.993);">Appointment Received</h2>
+    <h2 class="mb-4" style="color: rgb(30, 106, 9);">Appointment Received</h2>
 </div>
 
     <table id="appointmentsTable" class="table" border="1">
         <thead>
             <tr>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Property Name</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">First Name</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Last Name</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Middle Name</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Mobile Number</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Property Name</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">First Name</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Last Name</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Middle Name</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Mobile Number</th>
             </tr>
         </thead>
         <tbody></tbody>

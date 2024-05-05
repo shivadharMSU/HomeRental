@@ -8,7 +8,7 @@
 </head>
 <style>
  body {
-        background-image: url('bgimage4.jpg');
+        /* background-image: url('bgimage4.jpg'); */
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0;
@@ -28,8 +28,8 @@
         }
      
 .btn-custom-pink {
-    background-color: rgba(79, 7, 247, 0.993);;
-    border-color: rgba(79, 7, 247, 0.993);
+    background-color: rgb(30, 106, 9);
+    border-color: rgb(30, 106, 9);
     color: white; 
 }
 
@@ -37,8 +37,8 @@
 /* Hover and focus styles */
 .btn-custom-pink:hover,
 .btn-custom-pink:focus {
-    background-color: rgba(134, 111, 187, 0.993);
-    border-color: rgba(122, 104, 163, 0.993);
+    background-color: rgb(30, 106, 9);
+    border-color: rgb(30, 106, 9);
     color: white;
 }
 
@@ -47,48 +47,48 @@
 }
 
         table {
-          background-color: #42429ce0;
+          background-color: rgb(30, 106, 9);
         opacity: 0.7; /* Adjust the opacity value as needed */
 
     }
 </style>
 <body>
     
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="Main-Page.Html" style="color: rgba(79, 7, 247, 0.993);">HomeRentals.com</a>
+      <a class="navbar-brand" href="Main-Page.Html" style="color: rgb(30, 106, 9);">HomeRentals.com</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="Main-Page.Html">Home</a>
+            <a class="nav-link active text-dark" href="Main-Page.Html">Home</a>
           </li>
           <li class="nav-item" id="property">
-            <a class="nav-link" href="PropertyList.Html">Property</a>
+            <a class="nav-link text-dark" href="PropertyList.Html">Property</a>
           </li>
           <li class="nav-item" id="appSent">
-            <a class="nav-link" href="Appointment-Sent.Html">Appointments</a>
+            <a class="nav-link text-dark" href="Appointment-Sent.Html">Appointments</a>
           </li>
           <li class="nav-item"  id="appReceived">
-            <a class="nav-link" href="Appointment-Received.Html">Appointments</a>
+            <a class="nav-link text-dark" href="Appointment-Received.Html">Appointments</a>
         </li>
         <li class="nav-item"  id="propertyAppv">
-            <a class="nav-link" href="ApproveProperty.Html">Approve</a>
+            <a class="nav-link text-dark" href="ApproveProperty.Html">Approve</a>
         </li> 
         <li class="nav-item"  id="propertyAppv">
-          <a class="nav-link" href="About.Html">About us</a>
+          <a class="nav-link text-dark" href="About.Html">About us</a>
       </li>
         </ul>
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item" id="loginLink">
-            <a class="nav-link" href="Login.Html">Login</a>
+            <a class="nav-link text-dark" href="Login.Html">Login</a>
           </li> <li class="nav-item" id="registerLink">
-            <a class="nav-link" href="Registration-Page.Html">Register</a>
+            <a class="nav-link text-dark" href="Registration-Page.Html">Register</a>
         </li>                    
         <li class="nav-item" id="logout">
-          <a class="nav-link" onclick="logOut()">Logout</a>
+          <a class="nav-link text-dark" onclick="logOut()">Logout</a>
       </li>
         </ul>
       </div>
@@ -96,26 +96,26 @@
   </nav>
   <br>
   <div class="text-center">
-    <h2 class="mb-4" style="color: rgba(79, 7, 247, 0.993);">Property Details</h2>
+    <h2 class="mb-4" style="color: rgb(30, 106, 9);">Property Details</h2>
 </div>
     <br>
     <div style="margin-left: auto;">
       <button id="savedPropertyButton" class="bt btn-custom-pink">
-        <a href="Property-Details-Page.html" style="color: white; text-decoration: none;">Add Property</a>
+        <a href="Property-Details-Page.html" >Add Property</a>
     </button>  </div>
     <br>
     <table id="appointmentsTable" class="table" border="1">
         <thead>
             <tr>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Property Name</th>
-                <th scope="col>" style="color: rgba(51, 53, 182, 0.993);">Description</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Property Type</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Price</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Availability Date</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Amenities</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Full Address</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Edit</th>
-                <th scope="col" style="color: rgba(51, 53, 182, 0.993);">Delete</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Property Name</th>
+                <th scope="col>" style="color: rgb(30, 106, 9);">Description</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Property Type</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Price</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Availability Date</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Amenities</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Full Address</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Edit</th>
+                <th scope="col" style="color: rgb(30, 106, 9);">Delete</th>
             </tr>
         </thead>
         <tbody></tbody>
